@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: capoc
+  namespace: ns-lcl
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: capoc
+
+  template:
+    metadata:
+      labels:
+        app: capoc
+
+    spec:
+      containers:
+      - name: capoc
+        image: atrium5365/capoc:v3
+
+        env:
+        - name: CLOUD_PROVIDER
+          value: "base-omgeving"
+
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,5 @@
+# kustomization.yaml (in base map)
+resources:
+  - ns.yaml
+  - svc.yaml
+  - deploy.yaml
