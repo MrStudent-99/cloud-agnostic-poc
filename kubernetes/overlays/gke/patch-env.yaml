@@ -1,7 +1,9 @@
+# kubernetes/overlays/gke/patch-env.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: capoc
+  namespace: ns-lcl
 spec:
   template:
     spec:

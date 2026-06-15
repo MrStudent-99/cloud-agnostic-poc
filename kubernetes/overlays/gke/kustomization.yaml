@@ -1,5 +1,5 @@
 # kustomization.yaml (in overlays/gke map)
 resources:
   - ../../base
-patchesStrategicMerge:
-  - patch-env.yaml
+patches:
+  - path: patch-env.yaml
